@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTMLパス練習問題</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+<div class="page">
+	<header class="haeder">
+		<div class="header__head">
+			<h1 class="heading-1">HTMLパス練習問題</h1>
+			<ul class="header-list">
+				<li class="header-list__item">
+					<div class="button--default"><a href="#" onclick="removeCookie();location.reload();return false;">正解率リセット</a></div>
+				</li>
+				<li class="header-list__item js-ac__button--default">
+					<div class="button--default"><a href="#" onclick="return false;">使い方</a></div>
+				</li>
+			</ul>
+		</div>
+		<div class="header__body">
+			<section class="ac__detail js-ac__detail--default">
+				<h2 class="heading-2">使い方</h2>
+				<ol>
+					<li>1. 問題を読んで回答にパスを入力してください。</li>
+					<li>2. 入力後Enterキーを押すと正解または、不正解が表示されます。不正解の場合はヒントが出るのでもう一度回答してみよう！</li>
+					<li>3. 「正解を表示」をクリックすると正解が表示されます。</li>
+					<li>4. 「次へ」をクリックすると次の問題が表示されます。<br>
+						※ファイルパネルは青色から黄色へのリンクを表示しているよ。リンク先が同じページなら黄色のみ表示されるよ。<br>
+						※ブラウザの更新ボタンでは問題数や正解数がカウントされません。次へボタンかF5キーで更新してください。
+					</li>
+				</ol>
+			</section>
+		</div>
+	</header>
+	<main>
+		<div class="score">
+			<p class="text js-score"></p>
+		</div>
+		<div class="main__inner">
+			<div class="main__body">
+				<form name="fm">
+					<section class="main__content">
+						<h2 class="heading-2">問題</h2>
+						<div class="text">
+							<p class="js-question"><span class="text--fz-l js-question--a"></span>のページから、クリックして<span class="text--fz-l js-question--b"></span>のページを表示するには<span class="text--fz-l js-question--c"></span>パスでどう記述するでしょう？</p>
+							<p class="js-question"><span class="text--fz-l js-question--a"></span>のページに、<span class="text--fz-l js-question--b"></span>の画像を表示するには<span class="text--fz-l js-question--c"></span>パスでどう記述するでしょう？</p>
+							<p class="js-question"><span class="text--fz-l js-question--a"></span>のページから、<span class="text--fz-l js-question--b"></span>を読み込むには<span class="text--fz-l js-question--c"></span>パスでどう記述するでしょう？</p>
+							<p class="js-question"><span class="text--fz-l js-question--a"></span>のページから、<span class="text--fz-l js-question--b"></span>を読み込むには<span class="text--fz-l js-question--c"></span>パスでどう記述するでしょう？</p>
+							<p class="js-question"><span class="text--fz-l js-question--a"></span>から、<span class="text--fz-l js-question--b"></span>を背景画像として表示するには<span class="text--fz-l js-question--c"></span>パスでどう記述するでしょう？</p>
+						</div>
+					</section>
+					<section class="main__content">
+						<h2 class="heading-2">回答</h2>
+						<div class="form">
+							<p>
+								<code class="js-code--01">a href="</code>
+								<code class="js-code--02">img src="</code>
+								<code class="js-code--03">link href="</code>
+								<code class="js-code--04">script src="</code>
+								<code class="js-code--05">background-image:url(</code>
+								<input type="text" name="textarea" size="40" class="form__input js-form__input">
+								<code class="js-code--01">"<span class="form--caution js-code--01-caution" style="display: none;"><br>※index.htmlの記述は省かないでください</span></code>
+								<code class="js-code--02">"</code>
+								<code class="js-code--03">"</code>
+								<code class="js-code--04">"</code>
+								<code class="js-code--05">);</code>
+							</p>
+						</div>
+					</section>
+					<section class="main__content">
+						<h2 class="heading-2">正解</h2>
+						<div class="correct">
+							<p class="button--default js-correct"><a href="#" onclick="return false;">正解を表示</a></p>
+							<p class="correct__text js-correct__text"></p>
+							<p class="button--default js-correct__reload"><a href="#" onclick="locationHref();return false;">次へ</a></p>
+						</div>
+						<div class="js-correct-box"></div>
+					</section>
+				</form>
+			</div>
+			<div class="main__foot">
+				<section class="content">
+					<h2 class="heading-2">ファイルパネル</h2>
+					<div class="js-makeDirectory"></div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<div class="js-path" style="display:none;"></div>
+</div>
+</body>
+</html>
